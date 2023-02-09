@@ -3,15 +3,19 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState("off")
+  const [toggle, setToggle] = useState("off")
   
-  function toggleChange(){
-
+  function toggleChange() {
+    if (toggle === "off") {
+      setToggle("on")
+    } else {
+      setToggle("off")
+    }
   }
 
   return (
     <div className="App">
-      <button onClick={toggleChange}>Toggle</button>
+      <button onClick={toggleChange}>{toggle}</button>
         {/* <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
