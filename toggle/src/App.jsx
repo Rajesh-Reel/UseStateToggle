@@ -6,11 +6,13 @@ function App() {
   const [toggle, setToggle] = useState("off")
   
   function toggleChange() {
-    if (toggle === "off") {
-      setToggle("on")
-    } else {
-      setToggle("off")
-    }
+    // if (toggle === "off") {
+    //   setToggle("on")
+    // } else {
+    //   setToggle("off")
+    // }
+
+    toggle === "off" ? setToggle("on") : setToggle("off");
   }
 
   return (
