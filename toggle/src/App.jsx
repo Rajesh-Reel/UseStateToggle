@@ -4,7 +4,13 @@ import './App.css'
 
 function App() {
   const [toggle, setToggle] = useState("off")
-  
+  const [name, setName] = useState("Jordan")
+
+  function doBoth() {
+    toggleChange();
+    nameChange();
+  }
+
   function toggleChange() {
     // if (toggle === "off") {
     //   setToggle("on")
@@ -14,10 +20,13 @@ function App() {
 
     toggle === "off" ? setToggle("on") : setToggle("off");
   }
+  function nameChange() {
+    setName("Rajesh")
+  }
 
   return (
     <div className="App">
-      <button onClick={toggleChange}>{toggle}</button>
+      <button onClick={doBoth}>{toggle}</button>{name}
         {/* <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
