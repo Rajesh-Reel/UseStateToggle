@@ -21,7 +21,9 @@ function App() {
     toggle === "off" ? setToggle("on") : setToggle("off");
   }
   function nameChange() {
-    setName("Rajesh")
+    // setName("Rajesh")
+
+    name === "Jordan" ? setName("Rajesh") : setName("Jordan");
   }
 
   return (
